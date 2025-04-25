@@ -113,6 +113,14 @@ if st.session_state.df_clean is not None:
         st.subheader("Data Setelah Preprocessing")
         st.dataframe(df2)
 
+        csv = df2.to_csv(index=False).encode('utf-8')
+        st.download_button(
+            label="⬇️ Download CSV",
+            data=csv,
+            file_name="data_preprocessed.csv",
+            mime='text/csv'
+         )
+
 # Informasi lanjut
 if st.session_state.df is None:
     st.info("Lakukan langkah data gathering dan preprocessing terlebih dahulu untuk lanjut ke halaman Model & Visualisasi.")
