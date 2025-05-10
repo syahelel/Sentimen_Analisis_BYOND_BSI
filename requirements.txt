@@ -7,3 +7,6 @@ matplotlib
 seaborn
 Sastrawi
 wordcloud
+huggingface-hub
+joblib
+requests
