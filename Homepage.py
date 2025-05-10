@@ -14,7 +14,8 @@ Selamat datang di aplikasi analisis sentimen untuk review pengguna aplikasi **BY
 Di aplikasi ini, kamu bisa:
 - Mengambil data review dari Google Play Store
 - Melakukan preprocessing (pembersihan teks)
-- Melatih model klasifikasi sentimen
+- Memprediksi menggunakan model Random forest dan Linear Regression yang telah dilatih
+- Melihat Peforma Model
 - Melihat visualisasi seperti Word Cloud, Top Words, dan Distribusi Sentimen
 
 ---
