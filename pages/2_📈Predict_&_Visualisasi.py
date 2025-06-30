@@ -130,7 +130,7 @@ if df_new is not None:
             st.pyplot(fig_wc)
 
         # Top 10 Words Setiap Sentimen
-        st.subheader("🔝 Top 10 Kata per Sentimen")
+        st.subheader("🔝 Kata yang sering muncul tiap pada tiap sentimen")
         vectorizer = CountVectorizer(stop_words='english')
         top_words_dict = {}
 
@@ -150,11 +150,11 @@ if df_new is not None:
             fig2, ax2 = plt.subplots()
             sns.barplot(y=words, x=counts, ax=ax2,
                         color=palette_colors.get(label.lower(), 'gray'))
-            ax2.set_title(f"Top 10 Kata - {label}")
+            ax2.set_title(f"Kata yang sering muncul pada : - {label}")
             st.pyplot(fig2)
 
         # 🔥 Tampilkan daftar Top 10 secara eksplisit juga (di luar grafik)
-        st.subheader("📋 Daftar Top 10 Kata Positif, Negatif, Netral")
+        st.subheader("📋 Kata yang sering muncul pada : Positif, Negatif, Netral")
         for label in ['positif', 'negatif', 'netral']:
             st.markdown(f"**{label.capitalize()}**")
             if label in top_words_dict:
