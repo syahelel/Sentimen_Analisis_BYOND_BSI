@@ -162,3 +162,13 @@ if df_new is not None:
                 st.write(pd.DataFrame(top_list, columns=["Kata", "Jumlah"]))
             else:
                 st.info(f"Tidak ada data untuk label {label}.")
+  
+        # ⬇️ Fitur Download CSV
+        st.subheader("⬇️ Unduh Hasil Prediksi")
+        csv = df_new.to_csv(index=False).encode('utf-8')
+        st.download_button(
+            label="📥 Download CSV",
+            data=csv,
+            file_name='hasil_prediksi_sentimen.csv',
+            mime='text/csv'
+        )
